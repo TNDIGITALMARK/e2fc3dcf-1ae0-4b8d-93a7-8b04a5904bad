@@ -33,12 +33,13 @@ export function HeroSection() {
           {/* Hero Image */}
           <div className="flex-1 relative">
             <div className="relative bg-white rounded-2xl p-8 shadow-lg">
-              <div className="aspect-square bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 mb-4">
-                {/* Placeholder for hero cats image */}
-                <div className="text-center">
-                  <div className="text-6xl mb-2">🐱</div>
-                  <p className="text-sm">Three Adorable Cats</p>
-                </div>
+              <div className="aspect-square rounded-xl overflow-hidden mb-4">
+                {/* Hero cats image */}
+                <img
+                  src="/generated/three-adorable-cats-hero.png"
+                  alt="Three adorable cats - a black cat, orange tabby, and gray and white cat sitting together"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Decorative elements - toys scattered around */}
