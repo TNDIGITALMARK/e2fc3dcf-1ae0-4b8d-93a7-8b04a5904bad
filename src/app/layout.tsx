@@ -6,6 +6,8 @@ import { QueryProvider } from "@/components/query-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,8 +20,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Purrfect Paws - Cat Lovers E-Commerce Store",
+  description: "Premium cat products, toys, furniture, apparel, and more. Everything your feline friend needs for a happy, healthy life.",
 };
 
 export default function RootLayout({
@@ -40,7 +42,11 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <TooltipProvider>
-              {children}
+              <Navigation />
+              <main className="min-h-screen">
+                {children}
+              </main>
+              <Footer />
               <Toaster />
               <Sonner />
             </TooltipProvider>
